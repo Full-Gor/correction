@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+*  {
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/* création des colonnes en % avec 6 chiffres après la virgule*/
+.col_1 {width: 8.333333%;}
+.col_2 {width: 16.666666%;}
+.col_3 {width: 25%;}
+.col_4 {width: 33.333333%;}
+.col_5 {width: 41.666666%;}
+.col_6 {width: 50%;}
+.col_7 {width: 58.333333%;}
+.col_8 {width: 66.666666%;}
+.col_9 {width: 75%;}
+.col_10 {width: 83.333333%;}
+.col_11 {width:91.666666%;}
+.col_12 {width: 100%;}
+
+.container{
+    margin: 0 auto;
+    font-family: "Exo", sans-serif;
+}
+.border{
+    border: 2px solid red;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom:6px;
+    background-color: rgb(1, 6, 69);
+}
+
+nav a{
+    text-decoration: none;
+    color:#fff;
+    background-color: rgb(1, 6, 69);
+    padding: 20px;
+    text-align: center;
+}
+
+header nav a:first-child{
+    background-color: rgb(255, 113, 198);
+}
+
+.imgLogo{
+    margin-top: 20px;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.panier{
+    background-color: rgb(255, 113, 198);
+    padding: 20px;
+    color: white;
+}
+
+.slider{
+    text-align: center;
+}
+
+.myHr{
+    border: 3px solid rgb(1, 6, 69);
+    margin: 30px;
+}
+
+.link a{
+    color: rgb(255, 113, 198);
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 15%;
+}
+.link{
+    text-align: right;
+}
+
+footer{
+    font-family: "Exo", sans-serif;
+    margin-top: 5%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: rgb(1, 6, 69);
+}
+#burger{
+    display: none;
+}
+
+@media screen and (max-width:768px){
+    
+    .col_1 {width: 100%;}
+    .col_2 {width: 100%;}
+    .col_3 {width: 100%;}
+    .col_4 {width: 100%;}
+    .col_5 {width: 100%;}
+    .col_6 {width: 100%;}
+    .col_7 {width: 100%;}
+    .col_8 {width: 100%;}
+    .col_9 {width: 100%;}
+    .col_10 {width: 100%;}
+    .col_11 {width:100%;}
+    .col_12 {width: 100%;}
+
+    .slider img{
+        width: 100%;
+    }
+    .panier{
+        margin-bottom: 10px;
+    }
+    #nav{
+        flex-direction: column;
+        justify-content: start;
+        /* position: absolute;/ */
+        width: 100%;
+position: absolute;
+
+left: -100%;
+transition: all .5s ease-out;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        /* position: absolute;/ */
+    
+
+    }
+    #nav a {
+        text-align: start;
+    }
+    #nav.active{
+   left: 0;
+    }
+    #burger{
+        display:flex;
+        height: 3rem;
+        width: 3rem;
+        cursor: pointer;
+        
+    }
+    #burger:hover{
+        border: 1px solid red;
+    }
+    #burger:active{
+        background-color: aqua;
+    }
+
+}
